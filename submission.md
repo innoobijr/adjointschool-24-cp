@@ -1,3 +1,7 @@
+Structure vs. Observation
+
+*guest post by [Stelios Tsampas](author1&#x2019;s url) and [Amin Karamlou](aminkaramlou.github.io)
+
 <figure id="fig:enter-label-0">
     <img alt="" src="https://raw.githubusercontent.com/innoobijr/adjointschool-24-cp/main/img/context-0.png" style="width:80.0%" />
 </figure>
@@ -235,7 +239,7 @@ to decouple *s**t**r**u**c**t**u**r**e* from *c**o**n**t**e**n**t*. We
 need to move information about the *position* to the graph level. In
 this approach, our *p**o**s**i**t**i**o**n* or *numbering of nodes*
 would now be attached to the arrows or edges. We would also need to
-require that all isomorphic subtrees be replace by only óne&#x2019; amounting
+require that all isomorphic subtrees be replace by only 'one' amounting
 to an equivalence class of nodes each considered as a node. This process
 would turn our previously rooted undirected graph into a directed
 acyclic graph. One of the really interesting things about moving from
