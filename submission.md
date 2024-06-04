@@ -1,6 +1,6 @@
-Structure vs. Observation
+Embedding Derivations in Context and Conditions for (Local) Confluence in Graph Rewriting
 
-*guest post by [Stelios Tsampas](author1&#x2019;s url) and [Amin Karamlou](aminkaramlou.github.io)
+*guest post by [Anna Matsui]() and [nnocent Obi]()
 
 <figure id="fig:enter-label-0">
     <img alt="" src="https://raw.githubusercontent.com/innoobijr/adjointschool-24-cp/main/img/context-0.png" style="width:80.0%" />
