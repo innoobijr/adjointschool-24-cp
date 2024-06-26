@@ -650,6 +650,23 @@ In the category of symmetric monoidial categories with a Frobenius
 structure, confluence of rewriting systems based on the theory is
 decidable.
 
+# Referneces
+* Franz Baader and Tobias Nipkow. Term rewriting and all that. 1998
+Filippo Bonchi, Fabio Gadducci, Aleks Kissinger, Pawel Sobocinski, and
+* Fabio Zanasi. Rewriting modulo symmetric monoidal structure. 2016
+31st Annual ACM/IEEE Symposium on Logic in Computer Science (LICS),
+pages 1–10, 2016.
+* Jan Willem Klop Marc Bezem and Roel de Vrijer. Term rewriting systems.
+Cambridge Tracts in Theoretical Computer Science Cambridge University
+Press, 55, 2003.
+* Detlef Plump. Critical pairs in term graph rewriting. In International Sym-
+posium on Mathematical Foundations of Computer Science, 1994.
+* Detlef Plump. Checking graph-transformation systems for confluence. Elec-
+tron. Commun. Eur. Assoc. Softw. Sci. Technol., 26, 2010.
+* Kroening O. Strichman. Decision procedures: An algorithmic point of view.
+2008
+
+
 [^1]: Example of theories include propositional logic, equality, linear
     arithmetic, bit vectors. These are examples of first-order (FOL)
     theories. We can also have higher-order theories
