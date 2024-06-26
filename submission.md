@@ -6,7 +6,7 @@ Embedding Derivations in Context and Conditions for (Local) Confluence in Graph 
     <img alt="" src="https://raw.githubusercontent.com/innoobijr/adjointschool-24-cp/main/img/context-0.png" style="width:80.0%" />
 </figure>
 
-Introduction
+**Introduction**
 
 In this blog post we discuss the main (&#x2018;algebraic&#x2019;) ideas of term
 rewriting and then discuss how it can be applied to term graph and
@@ -21,9 +21,9 @@ up from term rewriting to rewriting on arbitrary graphs with a (very) little bit
 understand, for example, why we can&#x2019;t just apply, without modification,
 the ideas in Plump&#x2019;s paper to rewriting the *&#955;*-calculus or string diagrams.
 
-Preliminaries
+**Preliminaries**
 
-On theories, signatures, and terms
+**On theories, signatures, and terms**
 
 A theory can be thought as a &#x201C;finite or an infinite set of formulas
 characterized by common grammatical rules, allowed functions and
@@ -51,7 +51,7 @@ alphabet consisting of the signature and a countably infinite set *Var*
 of variables. The set of terms over *&#931;* is indicated as
 $F(\Sigma, Var)$. All variables and functions are terms.*
 
-*On abstract reduction systems*
+**On abstract reduction systems**
 
 More generally, we can view term rewriting systems as instances of an
 abstract reduction system.
@@ -93,7 +93,7 @@ or rewrite rules. The canonical term rewriting systems were viewed as
 decision procedures for proving the validity of equalities in
 first-order equational theories.
 
-*Term rewriting and all that!*
+**Term rewriting and all that!**
 
 How do we know when any two arbitrary terms (from some grammar) are
 equivalent and why should we care if any two terms are equivalent? One
@@ -118,7 +118,7 @@ above.
 **Definition 4** (Term Rewriting System). A rewrite or reduction rule is an identity $l \equiv r$ where $l$ is not a variable  and all the varialbles in $r$ are also in $l$. A term rewriting system is a set of a pairs consisting of the set of rewrite rules and a $\Sigma$ definition the non-logical symbols of the grammar. 
 
 
-*Context, overlaps, and critical pairs*
+**Context, overlaps, and critical pairs**
 
 In term rewriting, a position in a term $t$ detemines both a prefix of $t$, i.e holes  and the occurrence of the subterm with the prefix. The prefix of t that corresponds to p is denoted by $t[ ]_p$, the subterm  occurring at position $p$ by $t|_p$. When rewrites occur they occur in some context.
 
@@ -160,7 +160,7 @@ The term $F(G(a), x)$ can be reduced in two ways: $F(G(a),x) \xrightarrow[p]{} a
 Again overlap result when symbols are shared between any two redexes. We do this by defining a \textit{pattern} of a redex as the fixed part of the left-hand side. The result is a \textif{prefix} of the redex where all its variables are left out, i,e a potential many-hole context. It is the context that is created by replacing all variables in the redex with holes.  So to be more precise, two redexs overlap when their patterns share a symbol occurrence. 
 
 
-Redex considered harmful?
+**Redex considered harmful?**
 
 However, it is not the case that all overlaps of redexes are harmful.
 Some overlaps may occur after one-step reductions, but may be unified
@@ -199,7 +199,7 @@ decision procedures in term graph rewriting. But before we get into the
 similarities let stalk a little but about the different between trees
 and graphs as applied to terms rewriting.
 
-Structure and Contents (from Trees to Graphs)
+**Structure and Contents (from Trees to Graphs)**
 
 <figure id="fig:labelled-tree">
     <img alt="" src="https://raw.githubusercontent.com/innoobijr/adjointschool-24-cp/main/img/lab_with_iso.png" style="width:80.0%" />
@@ -264,7 +264,7 @@ Before we move on let just review some keys points.
     removing the restriction that each edge must have only two vertices
     (endpoints). 
 
-*Algebraic graph transformation and Plump&#x2019;s (strong) joinability*
+**Algebraic graph transformation and Plump&#x2019;s (strong) joinability**
 
 There are two way of approaching graph rewriting. In many way they
 mirror term rewriting (matching, deleting, copying). However as we
@@ -341,7 +341,7 @@ Using the definitions of term rewriting given in Section
 <a href="#" data-reference-type="ref" data-reference="">5</a>, we will
 now define term graph rewriting.
 
-*Instance, redex, and context*
+**Instance, redex, and context**
 
 **Definition 10** ((Hyper-)graph Rewriting System). *A hypergraph
 rewriting system &#10216;*&#931;*,&#8198;&#8475;&#10217; consists of a signature *&#931;* and a set of &#8475; of
@@ -373,7 +373,7 @@ corresponding to the left-hand side of the rewrite, "cut it out",
 replace it with the right-hand side graph, and then "glue" it back. This
 is the ideas behind the *double pushout*.
 
-*The double push-out and duality of labeling and tracing*
+**The double push-out and duality of labeling and tracing**
 
 <figure id="fig:ex">
 <img alt="" src="https://raw.githubusercontent.com/innoobijr/adjointschool-24-cp/main/img/dpo.png" style="width:50.0%" />
@@ -493,7 +493,7 @@ useful in proving confluence of graph rewriting systems is somewhat
 equivalent to demonstrating that the *dangling condition* and the
 *identification condition* are necessary in completing the pushout.
 
-*Overlaps in the context and critical pairs*
+**Overlaps in the context and critical pairs**
 
 As we mentioned previously, overlaps occur. In the term rewriting
 context, to ensure local confluence we needed to show that through a
@@ -535,7 +535,7 @@ rewriting system is said to be finite if *&#931;*<sub>*V*</sub>,
 
 We discuss why below.
 
-*The insufficiency of strong joinability*
+**The insufficiency of strong joinability**
 
 <figure id="fig:badjoin">
     <img alt="" src="https://raw.githubusercontent.com/innoobijr/adjointschool-24-cp/main/img/badjoin.png" style="width:80.0%" />
