@@ -1,4 +1,4 @@
-#Embedding Derivations in Context and Conditions for (Local) Confluence in Graph Rewriting
+# Embedding Derivations in Context and Conditions for (Local) Confluence in Graph Rewriting
 
 *guest post by [Anna Matsui]() and [Innocent Obi]()
 
