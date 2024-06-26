@@ -1,6 +1,6 @@
 Embedding Derivations in Context and Conditions for (Local) Confluence in Graph Rewriting
 
-*guest post by [Anna Matsui]() and [nnocent Obi]()
+*guest post by [Anna Matsui]() and [Innocent Obi]()
 
 <figure id="fig:enter-label-0">
     <img alt="" src="https://raw.githubusercontent.com/innoobijr/adjointschool-24-cp/main/img/context-0.png" style="width:80.0%" />
@@ -16,10 +16,10 @@ rewriting. We read *Critical Pairs in Term Graph Rewriting* and given
 the task before us wanted to understand the following question: if Plump
 needed a new decision procedure for critical pairs on graph rewriting,
 how would we know what we might need for string diagram rewriting? In
-the this blog post we start at the root (pun intended) and work our way
-up from term rewriting to rewriting on arbitrary graphs. The goal is to
+this blog post we start at the root (pun intended) and work our way
+up from term rewriting to rewriting on arbitrary graphs with a (very) little bit on string diagrams. The goal is to
 understand, for example, why we can&#x2019;t just apply, without modification,
-the ideas in Plump&#x2019;s paper to rewriting the *&#955;*-calculus.
+the ideas in Plump&#x2019;s paper to rewriting the *&#955;*-calculus or string diagrams.
 
 Preliminaries
 
@@ -47,16 +47,16 @@ with equality as the singular logical symbol.
 function symbol *F* is a natural number, indicating the number of
 arguments it is supposed to have. Nullary functions are allowed: these
 are called *constant symbols*.A term is a strings of symbols from an
-alphabet. consisting of the signature and a countably infinite set *Var*
+alphabet consisting of the signature and a countably infinite set *Var*
 of variables. The set of terms over *&#931;* is indicated as
-&#119983;(*&#931;*,&#8198;*V**a**r*). All variables and functions are terms.*
+$F(\Sigma, Var)$. All variables and functions are terms.*
 
-On abstract reduction systems
+*On abstract reduction systems*
 
 More generally, we can view term rewriting systems as instances of an
 abstract reduction system.
 
-**Definition 2** (Abstract reduction system ).      An abstract reduction systems is a pair $(A, \rightarrow)$, where $\rightarrow$ is a binary relation on the set $A$, i.e $ \rightarrow  \subseteq A \times A$. 
+**Definition 2** (Abstract reduction system ).      An abstract reduction system is a pair $(A, \rightarrow)$, where $\rightarrow$ is a binary relation on the set $A$, i.e $ \rightarrow  \subseteq A \times A$. 
 
 
 In an abstract reduction system, we can view the relation &#8594; as
@@ -93,7 +93,7 @@ or rewrite rules. The canonical term rewriting systems were viewed as
 decision procedures for proving the validity of equalities in
 first-order equational theories.
 
-Term rewriting and all that!
+*Term rewriting and all that!*
 
 How do we know when any two arbitrary terms (from some grammar) are
 equivalent and why should we care if any two terms are equivalent? One
@@ -118,7 +118,7 @@ above.
 **Definition 4** (Term Rewriting System). A rewrite or reduction rule is an identity $l \equiv r$ where $l$ is not a variable  and all the varialbles in $r$ are also in $l$. A term rewriting system is a set of a pairs consisting of the set of rewrite rules and a $\Sigma$ definition the non-logical symbols of the grammar. 
 
 
-Context, overlaps, and critical pairs
+*Context, overlaps, and critical pairs*
 
 In term rewriting, a position in a term $t$ detemines both a prefix of $t$, i.e holes  and the occurrence of the subterm with the prefix. The prefix of t that corresponds to p is denoted by $t[ ]_p$, the subterm  occurring at position $p$ by $t|_p$. When rewrites occur they occur in some context.
 
@@ -261,11 +261,10 @@ Before we move on let just review some keys points.
 
 3.  Our use of a DAG allows the use of references to used instead of
     duplicated nodes. Although, we will need to generalize our graph by
-    removing the restrict that each edge have only two vertices
-    (endpoints). That is we need to move from just the generic graph to
-    the hypergraph.
+    removing the restriction that each edge must have only two vertices
+    (endpoints). 
 
-Algebraic graph transformation and Plump&#x2019;s (strong) joinability
+*Algebraic graph transformation and Plump&#x2019;s (strong) joinability*
 
 There are two way of approaching graph rewriting. In many way they
 mirror term rewriting (matching, deleting, copying). However as we
@@ -342,13 +341,13 @@ Using the definitions of term rewriting given in Section
 <a href="#" data-reference-type="ref" data-reference="">5</a>, we will
 now define term graph rewriting.
 
-Instance, redex, and context
+*Instance, redex, and context*
 
 **Definition 10** ((Hyper-)graph Rewriting System). *A hypergraph
 rewriting system &#10216;*&#931;*,&#8198;&#8475;&#10217; consists of a signature *&#931;* and a set of &#8475; of
 rules over *&#931;*.*
 
-When proving confluence in hypergraph goal is to find *isomorphic
+When proving confluence in hypergraphs, our goal is to find *isomorphic
 graphs*. It is a view of confluence that considers hypergraphs
 transformation "up to isomorphism".
 
@@ -374,7 +373,7 @@ corresponding to the left-hand side of the rewrite, "cut it out",
 replace it with the right-hand side graph, and then "glue" it back. This
 is the ideas behind the *double pushout*.
 
-The double push-out and duality of labeling and tracing
+*The double push-out and duality of labeling and tracing*
 
 <figure id="fig:ex">
 <img alt="" src="https://raw.githubusercontent.com/innoobijr/adjointschool-24-cp/main/img/dpo.png" style="width:50.0%" />
@@ -430,7 +429,7 @@ two other types of operations: *folding* and *tracing*. The goal of the
 former is to increase the level of sharing between edges that share the
 same labels and terms. The latter, tracing, is a bit more involved.
 
-Tracing semantics
+*Tracing semantics*
 
 <figure id="fig:labelling">
 <img alt="" src="https://raw.githubusercontent.com/innoobijr/adjointschool-24-cp/main/img/labelling.png" style="width:80.0%" />
@@ -494,7 +493,7 @@ useful in proving confluence of graph rewriting systems is somewhat
 equivalent to demonstrating that the *dangling condition* and the
 *identification condition* are necessary in completing the pushout.
 
-Overlaps in the context and critical pairs
+*Overlaps in the context and critical pairs*
 
 As we mentioned previously, overlaps occur. In the term rewriting
 context, to ensure local confluence we needed to show that through a
@@ -536,7 +535,7 @@ rewriting system is said to be finite if *&#931;*<sub>*V*</sub>,
 
 We discuss why below.
 
-The insufficiency of strong joinability
+*The insufficiency of strong joinability*
 
 <figure id="fig:badjoin">
     <img alt="" src="https://raw.githubusercontent.com/innoobijr/adjointschool-24-cp/main/img/badjoin.png" style="width:80.0%" />
@@ -584,7 +583,7 @@ Sec.<a href="#sec:intro" data-reference-type="ref"
 data-reference="sec:intro">1</a>: why cant we just apply the ideas from
 to rewriting the untyped *&#955;*-calculus?  
 
-Critical pairs for arbitrary graphs
+**Critical pairs for arbitrary graphs**
 
 **Variable binding and higher-order rewriting.** First, let&#x2019;s revisit
 the basic term writing system {*&#931;*,&#8198;&#8475;} but with a tiny signature
@@ -605,7 +604,7 @@ expanding and rethinking many of the formulation for *first-order
 rewriting*. Here are some resource on higher-order equational logics and
 rewriting: .
 
-*double pushout with interfaces (DPOI).** Okay I know we said that
+**double pushout with interfaces (DPOI).** Okay I know we said that
 confluence for finite, terminating hypergraph rewrite systems was
 undecidable, but there may be a way at least for string diagrams. The
 work of double pushout with interfaces (DPOI) introduces a new notion of
