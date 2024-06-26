@@ -605,22 +605,38 @@ expanding and rethinking many of the formulation for *first-order
 rewriting*. Here are some resource on higher-order equational logics and
 rewriting: .
 
-**double pushout with interfaces (DPOI).** Okay I know we said that
+*double pushout with interfaces (DPOI).** Okay I know we said that
 confluence for finite, terminating hypergraph rewrite systems was
 undecidable, but there may be a way at least for string diagrams. The
 work of double pushout with interfaces (DPOI) introduces a new notion of
 *path joinability* that relies on lifting critical pairs into arbitrary
-contexts. So in this case using DPOI and most importantly equational
-reasoning based on symmetric monoidal theories, we can show that string
-diagram rewriting is decidable! Our colleague will discuss this a bit in
-their blog post, but our one little bit is that DPOI seems like a double
-pushout with a single pullback.
+contexts. This work links hypergraphs and symmetric monoidal categories:
+the former is a combinatorial representation of the latter. This work
+says that we we can show that string diagram rewriting, represented as
+hypergraphs with interfaces, is decidable! Our colleague will discuss
+this a bit in their blog post, but our one little bit is that DPOI seems
+like a double pushout with a single pullback. To tease, that work,
+similar to theories and signatures for terms in our universal algebra,
+the structure of a symmetric monoidal category can be represented with
+the notion of a *symmetric monoidal theory*.
 
-Conclusion
+**Definition 15** (one-sorted symmetric monoidal theory (SMT) ). *A
+one-sorted SMT is determined by (*Σ*, ℰ) where *Σ*, the signature,
+consists of a set of *generators* *o* : *n* → *m* with arity *n* and
+coarity *m* where *m*, *n* ∈ ℕ. The set of *Σ*-terms is obtained by
+combining generators in *Σ*, the unit `i``d` : 1 → 1, and the symmetry
+*σ*<sub>1, 1</sub> : 3 → 2 with sequencing (;) and parallel composition
+(⊕). Any SMT (*Σ*, *E*) freely generates a product and permutation
+category (PROP). For an arbitary PROP *X*, a rewriting rule is a pair
+$\langle l, r\range$ where *l*, *r* : *i* → *j* are arrows in *X* with
+the same sourcre and target. A rewriting systems ℛ is a set of rewriting
+rules.*
+
+# Conclusion
 
 In term and string rewriting, confluence is decidable for terminating
 systems requiring finding all critical terms *s* and and checking that
-all critical pairs *t* and *u* in *t*&#8196;&#8592;&#8196;*s*&#8196;&#8594;&#8196;*u* reduce to a common
+all critical pairs *t* and *u* in *t* ← *s* → *u* reduce to a common
 term or string. In the case of terminating graph-transformation systems,
 confluence is undecidable (using critical pairs as a DP) unless certain
 restrictions are applied. In this setting, join-ability of critical
@@ -628,7 +644,12 @@ pairs does not need to imply the confluence of a rewriting systems. That
 is, there are confluent rewriting systems where are critical pairs are
 not (strongly) joinable. (Strong) joinability is not a necessary
 condition for confluence of a rewriting system and can be used a a
-decision procedure for general (hyper-)graph rewriting systems.
+decision procedure for general (hyper-)graph rewriting systems. This
+result doesn’t not appear to apply to string diagram rewriting if we
+treat them as symmetric monoidial categories with some extra structure.
+In the category of symmetric monoidial categories with a Frobenius
+structure, confluence of rewriting systems based on the theory is
+decidable.
 
 [^1]: Example of theories include propositional logic, equality, linear
     arithmetic, bit vectors. These are examples of first-order (FOL)
