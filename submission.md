@@ -16,7 +16,7 @@ the ideas in Plump&#x2019;s paper to rewriting in the *&#955;*-calculus. This po
 
 A theory can be thought as a &#x201C;finite or an infinite set of formulas
 characterized by common grammatical rules, allowed functions and
-predicates, and a domain of values"[^1] . First order logic (FOL) is based on
+predicates, and a domain of values. Example of theories include propositional logic, equality, linear arithmetic, bit vectors. These are examples of first-order (FOL) theories. We can also have higher-order theories . First order logic (FOL) is based on
 the following four elements: variables, logical symbols (boolean
 connectives and quantifiers), non-logical symbols (functions,
 predicates, constants), and syntax (rules about constructing valid
@@ -61,7 +61,7 @@ $x \xrightarrow{\text{\*}} y$. *x* and *y* are **joinable** (*x*&#8196;&#8595;&#
 
 * terminating iff there is not infinite descending chain $x_0 \rightarrow x_1 \rightarrow \cdots$
 
-* confluent [^2]  iff
+* confluent iff
 $x \xrightarrow{\text{\*}} z \xleftarrow{\text{\*}} y \implies x\downarrow y$*
 
 Whether a string, term, or graph, rewriting system are mechanisms for
@@ -307,8 +307,7 @@ and target functions correspondingly. We will call a graph *H* a
 *collasped* version of *G*, if there is a surjective graph morphism
 *f*&#8196;:&#8196;*G*&#8196;&#8594;&#8196;*H* such that
 *f*<sub>*v*</sub>(*r**o**o**t*<sub>*G*</sub>)&#8196;=&#8196;*r**o**o**t*<sub>*H*</sub>.
-This is usually denoted &#8805; and the inverse (copying) is denoted as &#8804;
-[^3]. A term graph is a tree if there is only a unique path from the
+This is usually denoted &#8805; and the inverse (copying) is denoted as &#8804;. A term graph is a tree if there is only a unique path from the
 root to each other node and it is fully collapsed if and only if for all
 nodes *v* and *w*, equality of the terms representing nodes*v* and *w*
 implies that node *v* and *w* are equal.
@@ -630,15 +629,6 @@ treat them as symmetric monoidial categories with some extra structure.
 In the category of symmetric monoidial categories with a Frobenius
 structure, confluence of rewriting systems based on the theory is
 decidable.
-
-[^1]: Example of theories include propositional logic, equality, linear
-    arithmetic, bit vectors. These are examples of first-order (FOL)
-    theories. We can also have higher-order theories
-
-[^2]: *In the -calculus a similar property, the Church-Rosser property -
-    was proved by Alonzo Church and J. Barkley Rosser*
-
-[^3]: both relations when proper are indicated as \< and \> respectively
 
 **Reference**
 
